@@ -180,7 +180,6 @@ body {
     .pp {
         font-size: 24px;
         margin: 8px 0;
-        -webkit-text-stroke: 1.5px #71004f;
     }
     
     .Mainprompt {
@@ -222,13 +221,11 @@ body {
     
     .hh {
         font-size: 18px;
-        -webkit-text-stroke: 1px #71004f;
     }
     
     .pp {
         font-size: 20px;
         margin: 8px 0;
-        -webkit-text-stroke: 1px #71004f;
     }
     
     .image {
