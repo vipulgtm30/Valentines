@@ -4,67 +4,93 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
+    padding: 20px 10px;
     background: url('images/simple-cute-heart-pattern-wallpaper-copules-anniversary_1017-49423.avif') repeat;
-    font-size: 35px;
+    font-size: 28px;
     color: rgb(255, 0, 174);
+    box-sizing: border-box;
 }
+
 .hh{
     -webkit-text-stroke: 2px #71004f;
     font-weight:900;
-
+    font-size: 24px;
+    margin: 15px 0;
 }
+
 .pp{
     -webkit-text-stroke: 2px #71004f;
-
-    font-size: 50px;
+    font-size: 32px;
     font-style: oblique;
     font-weight: 800;
+    margin: 15px 0;
 }
-
-body
 
 .container {
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     background-color: transparent;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+}
+
+.Mainprompt {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
 }
 
 .image{
-    height: 280px;
-    
+    height: auto;
+    max-height: 280px;
+    max-width: 100%;
+    width: auto;
+    margin-bottom: 20px;
 }
 
 .buttons button {
     background-color: #ff4d79;
     color: #fff;
-    padding: 10px 30px;
+    padding: 15px 30px;
     border: none;
     border-radius: 10px;
-    margin: 10px;
-    font-size: 26px;
+    margin: 8px;
+    font-size: 20px;
     cursor: pointer;
     position: relative;
-    font-family: 'Lobster', cursive; /* Change to a romantic cursive font */
-
+    font-family: 'Lobster', cursive;
+    min-width: 100px;
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .buttons button:hover {
     background-color: #7c1f37;
+}
 
+.buttons button:active {
+    transform: scale(0.98);
 }
 
 .buttons{
     display: flex;
     justify-content: center;
     flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 #no-button{
@@ -90,4 +116,98 @@ body
 
 .message{
     color: #71004f;
+    padding: 0 10px;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+/* Mobile Optimization for iPhones and small screens */
+@media (max-width: 768px) {
+    body {
+        font-size: 24px;
+        padding: 15px;
+        min-height: auto;
+    }
+    
+    .hh {
+        font-size: 22px;
+        margin: 10px 0;
+    }
+    
+    .pp {
+        font-size: 28px;
+        margin: 10px 0;
+    }
+    
+    .container {
+        min-height: auto;
+    }
+    
+    .Mainprompt {
+        padding: 15px 10px;
+    }
+    
+    .image {
+        max-height: 240px;
+        margin-bottom: 15px;
+    }
+    
+    .buttons button {
+        padding: 12px 24px;
+        font-size: 18px;
+        margin: 6px 4px;
+        min-width: 90px;
+    }
+    
+    .message {
+        font-size: 16px;
+        padding: 0 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 20px;
+        padding: 10px;
+    }
+    
+    .hh {
+        font-size: 20px;
+        margin: 8px 0;
+    }
+    
+    .pp {
+        font-size: 24px;
+        margin: 8px 0;
+        -webkit-text-stroke: 1.5px #71004f;
+    }
+    
+    .Mainprompt {
+        padding: 10px 8px;
+    }
+    
+    .image {
+        max-height: 200px;
+        margin-bottom: 12px;
+    }
+    
+    .buttons {
+        width: 100%;
+        gap: 8px;
+    }
+    
+    .buttons button {
+        padding: 12px 20px;
+        font-size: 16px;
+        margin: 4px 2px;
+        min-width: 80px;
+        flex: 1;
+        min-width: 70px;
+    }
+    
+    .message {
+        font-size: 14px;
+        padding: 0;
+        line-height: 1.4;
+    }
 }
