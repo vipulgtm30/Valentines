@@ -31,8 +31,8 @@ function showMessage(response) {
   if (response === "No") {
     const noButton = document.getElementById("no-button");
     const container = document.querySelector(".container");
-    const maxWidth = window.innerWidth - noButton.offsetWidth;
-    const maxHeight = window.innerHeight - noButton.offsetHeight;
+    const maxWidth = window.innerWidth - noButton.offsetWidth - 10;
+    const maxHeight = window.innerHeight - noButton.offsetHeight - 10;
 
     // Set button position to absolute
     noButton.style.position = "absolute";
@@ -41,8 +41,8 @@ function showMessage(response) {
     document.getElementsByClassName("image")[0].src = "images/gun.gif";
 
     // Generate random coordinates within the visible container
-    const randomX = Math.max(0, Math.floor(Math.random() * maxWidth));
-    const randomY = Math.max(0, Math.floor(Math.random() * maxHeight));
+    const randomX = Math.max(10, Math.floor(Math.random() * maxWidth));
+    const randomY = Math.max(10, Math.floor(Math.random() * maxHeight));
 
     // Apply new coordinates to the button
     noButton.style.left = randomX + "px";
