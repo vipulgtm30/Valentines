@@ -14,14 +14,12 @@ body {
 }
 
 .hh{
-    -webkit-text-stroke: 2px #71004f;
     font-weight:900;
     font-size: 24px;
     margin: 15px 0;
 }
 
 .pp{
-    -webkit-text-stroke: 2px #71004f;
     font-size: 32px;
     font-style: oblique;
     font-weight: 800;
@@ -69,7 +67,7 @@ body {
     font-size: 20px;
     cursor: pointer;
     position: relative;
-    font-family: 'Lobster', cursive;
+    font-family: 'Lobster';
     min-width: 100px;
     min-height: 48px;
     touch-action: manipulation;
@@ -120,7 +118,7 @@ body {
     color: #71004f;
     padding: 0 10px;
     line-height: 1.5;
-    font-size: 18px;
+    font-size: 28px;
 }
 
 /* Mobile Optimization for iPhones and small screens */
